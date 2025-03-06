@@ -7,7 +7,6 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ../
     steps:
       - name: Setup Python
         uses: actions/setup-python@v3
@@ -17,7 +16,10 @@ jobs:
       - name: Install Databricks CLI
         uses: databricks/setup-cli@main
 
-      - name: Remote update Prod Repo
+      - name: Get repo
+        uses: actions/checkout@v4
+        
+      - name: Deploy
         env: 
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
