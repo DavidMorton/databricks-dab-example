@@ -1,0 +1,30 @@
+on:
+  push
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+
+      - name: Install Databricks CLI
+        uses: databricks/setup-cli@main
+
+      - name: Get repo
+        uses: actions/checkout@v4
+        
+      - name: Deploy
+        env: 
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: |
+          pwd
+          ls -l
+          databricks bundle deploy
+          databricks bundle run db
