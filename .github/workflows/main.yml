@@ -7,7 +7,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ../databricks-dab-example
+        working-directory: ../
     steps:
       - name: Setup Python
         uses: actions/setup-python@v3
