@@ -15,13 +15,13 @@ targets:
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
     mode: development
     default: true
-    workspace:
-      host: ${{ secrets.DATABRICKS_HOST }}
+    #workspace:
+      #host: ${{ secrets.DATABRICKS_HOST }}
 
   prod:
     mode: production
     workspace:
-      host: ${{ secrets.DATABRICKS_HOST }}
+      #host: ${{ secrets.DATABRICKS_HOST }}
       # We explicitly deploy to /Workspace/Users/david.morton@databricks.com to make sure we only have a single copy.
       root_path: /Workspace/Users/david.morton@databricks.com/.bundle/${bundle.name}/${bundle.target}
     permissions:
