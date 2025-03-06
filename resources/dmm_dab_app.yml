@@ -4,7 +4,7 @@ resources:
       name: 'db'
       description: 'An app that does something'
 
-      source_code_path: ../src/db
+      source_code_path: ../app
 
       config:
         command:
