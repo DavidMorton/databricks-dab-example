@@ -16,12 +16,12 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://adb-984752964297111.11.azuredatabricks.net
+      host: https://dbc-aa02c94a-55e0.cloud.databricks.com/
 
   prod:
     mode: production
     workspace:
-      host: https://adb-984752964297111.11.azuredatabricks.net
+      host: https://dbc-aa02c94a-55e0.cloud.databricks.com/
       # We explicitly deploy to /Workspace/Users/david.morton@databricks.com to make sure we only have a single copy.
       root_path: /Workspace/Users/david.morton@databricks.com/.bundle/${bundle.name}/${bundle.target}
     permissions:
