@@ -22,6 +22,7 @@ jobs:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: |
+          pwd
           ls -l
           databricks bundle deploy
           databricks bundle run db
