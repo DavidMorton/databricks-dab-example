@@ -1,0 +1,13 @@
+# The main pipeline for dmm_dab_test
+resources:
+  pipelines:
+    dmm_dab_test_pipeline:
+      name: dmm_dab_test_pipeline
+      catalog: default
+      target: dmm_dab_test_${bundle.target}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src

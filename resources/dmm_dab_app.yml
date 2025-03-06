@@ -1,0 +1,13 @@
+resources:
+  apps:
+    db:
+      name: 'db'
+      description: 'An app that does something'
+
+      source_code_path: ../src/db
+
+      config:
+        command:
+          - reflex
+          - run
+        default_source_code_path: /Workspace/Users/david.morton@databricks.com/.bundle/dmm_dab_test/dev/files/src/db
