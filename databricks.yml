@@ -16,12 +16,12 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://dbc-aa02c94a-55e0.cloud.databricks.com/
+      host: ${{ secrets.DATABRICKS_HOST }}
 
   prod:
     mode: production
     workspace:
-      host: https://dbc-aa02c94a-55e0.cloud.databricks.com/
+      host: ${{ secrets.DATABRICKS_HOST }}
       # We explicitly deploy to /Workspace/Users/david.morton@databricks.com to make sure we only have a single copy.
       root_path: /Workspace/Users/david.morton@databricks.com/.bundle/${bundle.name}/${bundle.target}
     permissions:
