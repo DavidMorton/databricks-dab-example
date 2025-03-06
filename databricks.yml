@@ -15,6 +15,10 @@ targets:
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
     mode: development
     default: true
+
+    # Omitting the workspace specification. This is set in the github action secrets on GitHub by setting the DATABRICKS_HOST secret value.
+    # In addition to the DATABRICKS_HOST value, DATABRICKS_TOKEN, is the token used to authorize the deployment. 
+    
     #workspace:
       #host: ${{ secrets.DATABRICKS_HOST }}
 
