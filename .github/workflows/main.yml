@@ -4,7 +4,10 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        shell: bash
+        working-directory: ../../
     steps:
       - name: Setup Python
         uses: actions/setup-python@v3
