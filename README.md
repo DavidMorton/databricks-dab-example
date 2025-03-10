@@ -39,8 +39,22 @@ Once you've created a new repo in GitHub containing the contents of this repo, g
 1. In Databricks, visit the workspace to which you'd like to deploy your app.
 
 1. In the upper right corner, click the icon with your initial or photo on it, and go to Settings.
-1. On the settings page, navigate to Developer on the right panel. 
-1. Next to "Access Tokens", you'll see a button to manage your access tokens. Click it.
+1. On the settings page, navigate to Identity and access in the right panel. 
+1. On the right panel, click to manage service principals. (If you already have a service principal, feel free to skip this step.)
+1. Click to add a service principal.
+1. Click "Add New"
+1. Enter a name for your service principal and click "Add".
+1. Go back to managing service principals.
+1. Click on the link for the service principal you created.
+1. Click on the Secrets tab.
+1. Generate a new OAuth Secret by clicking the "Generate Secret" button.
+1. Copy the secret from the screen that appears. You won't be able to get to it once you close the dialog.
+
+
+
+1. Make sure "Link Git account" is selected, and click "Link"
+1. It'll redirect you to GitHub. Sign into GitHub or select your account.
+
 
 ![](./.img/access-tokens.png)
 
@@ -60,7 +74,9 @@ Once you've created a new repo in GitHub containing the contents of this repo, g
 
 ![](.img/repo-secrets.png)
 
-3. Create a new repository secret. Name it DATABRICKS_TOKEN, and for the value, paste the token you generated above.
+3. Create a new repository secret. Name it DATABRICKS_CLIENT_SECRET, and for the value, paste the secret value from when you set up the OAuth secret in Databricks.
+1. In Databricks, copy the client ID from the the secrets tab of your service principal.
+1. Create a new repository secret. Name it DATABRICKS_CLIENT_ID, and for the value, paste the client ID from the above step.
 1. Copy the hostname (without any URL path) of your Databricks workspace. You should be able to get this from your browser's navigation bar.
 1. Create a new repository secret. Name it DATABRICKS_HOST, and paste the hostname in as the value. Remember to exclude any part of the URL following the domain name. 
 

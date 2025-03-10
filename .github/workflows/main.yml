@@ -26,6 +26,6 @@ jobs:
         run: |
           pwd
           ls -l
-          databricks login
+          databricks auth login
           databricks bundle deploy
           databricks bundle run db
