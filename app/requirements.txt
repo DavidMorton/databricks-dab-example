@@ -7,3 +7,5 @@ databricks-sdk
 python-dotenv
 dash-ag-grid
 reflex
+# reflex-enterprise <-- do not include this as it causes Databricks Apps to fail with a 431 (too many headers) error.
+
