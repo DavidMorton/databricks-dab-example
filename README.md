@@ -1,4 +1,4 @@
-# Skeleton for deploying Databricks Apps using DAB
+# Skeleton for deploying Databricks Apps using Databricks Asset Bundles
 
 ## Intro
 
